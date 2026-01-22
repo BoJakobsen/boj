@@ -1,0 +1,347 @@
+/* ===========================================
+   Bo Jakobsen - Personal Website
+   Modern tech/engineering aesthetic
+   =========================================== */
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* Colors - neutral palette */
+  --color-bg: #fafafa;
+  --color-bg-alt: #f0f0f0;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666666;
+  --color-text-light: #888888;
+  --color-accent: #2a2a2a;
+  --color-border: #e0e0e0;
+  --color-link: #0066cc;
+  --color-link-hover: #0044aa;
+  
+  /* Typography */
+  --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  
+  /* Layout */
+  --max-width: 800px;
+  --border-radius: 4px;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 var(--space-md) 0;
+  color: var(--color-accent);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: var(--space-xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+p {
+  margin: 0 0 var(--space-md) 0;
+}
+
+/* --- Links --- */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* --- Header / Hero --- */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  border: 3px solid var(--color-border);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-title {
+  margin-bottom: var(--space-xs);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  font-weight: 400;
+}
+
+.hero-tagline {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- Navigation Links --- */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-bg-alt);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+}
+
+/* --- Sections --- */
+.section {
+  padding: var(--space-lg) 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- Link Cards --- */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.link-card {
+  display: block;
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.link-card-title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.link-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Simple List --- */
+.simple-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.simple-list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.simple-list li:last-child {
+  border-bottom: none;
+}
+
+/* --- Contact Info --- */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  font-size: 0.95rem;
+}
+
+.contact-list .label {
+  color: var(--color-text-light);
+  min-width: 80px;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* --- Subpage Header --- */
+.page-header {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header .back-link {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.page-header .back-link:hover {
+  color: var(--color-link);
+}
+
+.page-header h1 {
+  margin-bottom: 0;
+}
+
+/* --- Content (for subpages) --- */
+.content {
+  padding: var(--space-lg) 0;
+}
+
+.content p {
+  max-width: 65ch;
+}
+
+.content ul, .content ol {
+  padding-left: var(--space-lg);
+}
+
+.content li {
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Utility Classes --- */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  :root {
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-photo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .nav-links {
+    justify-content: center;
+  }
+  
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
