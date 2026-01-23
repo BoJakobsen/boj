@@ -286,6 +286,10 @@ a:hover {
   padding: var(--space-lg) 0;
 }
 
+.content > :first-child {
+  margin-top: 0;
+}
+
 .content p {
   max-width: 65ch;
 }
@@ -296,6 +300,63 @@ a:hover {
 
 .content li {
   margin-bottom: var(--space-sm);
+}
+
+/* --- Thesis Intro (two-column with image) --- */
+.thesis-intro {
+  display: flex;
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.thesis-intro-text {
+  flex: 1;
+}
+
+.thesis-intro-image {
+  flex-shrink: 0;
+  max-width: 280px;
+}
+
+.thesis-intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 700px) {
+  .thesis-intro {
+    flex-direction: column-reverse;
+  }
+  
+  .thesis-intro-image {
+    max-width: 100%;
+  }
+}
+
+/* --- Image Gallery --- */
+.image-gallery {
+  margin: var(--space-lg) 0;
+}
+
+.image-gallery figure {
+  margin: 0 0 var(--space-lg) 0;
+  padding: 0;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.image-gallery figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
 }
 
 /* --- Utility Classes --- */
