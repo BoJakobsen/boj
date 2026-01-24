@@ -5,7 +5,19 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  /* Colors - neutral palette */
+ /* Colors - muted sophisticated palette */
+  --color-bg: #D7D1D1;           /* warm light pink-grey */
+  --color-bg-alt: #D1D7D7;       /* cool mint-grey */
+  --color-surface: #e8e4e4;      /* slightly lighter than bg */
+  --color-text: #424341;         /* dark charcoal */
+  --color-text-muted: #5a5a59;
+  --color-text-light: #7a7a79;
+  --color-accent: #424341;       /* dark charcoal */
+  --color-border: #AAAFAF;       /* steel grey */
+  --color-link: #6b6483;         /* muted purple from AFA9B4 darkened */
+  --color-link-hover: #424341;   /* dark on hover */
+    
+  /* Colors - neutral palette 
   --color-bg: #fafafa;
   --color-bg-alt: #f0f0f0;
   --color-surface: #ffffff;
@@ -16,6 +28,7 @@
   --color-border: #e0e0e0;
   --color-link: #0066cc;
   --color-link-hover: #0044aa;
+ */
   
   /* Typography */
   --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -236,19 +249,24 @@ a:hover {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
 }
 
 .contact-list li {
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  padding: var(--space-xs) 0;
-  font-size: 0.95rem;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
 .contact-list .label {
   color: var(--color-text-light);
-  min-width: 80px;
+  font-size: 0.85rem;
+}
+
+.contact-list .value {
+  font-size: 0.95rem;
 }
 
 /* --- Footer --- */
@@ -301,6 +319,26 @@ a:hover {
 .content li {
   margin-bottom: var(--space-sm);
 }
+
+/* --- Heading Groups (title + subtitle) --- */
+hgroup {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
+}
+
+hgroup h2 {
+  margin: 0;
+  border-bottom: none;
+}
+
+hgroup p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: var(--space-xs) 0 0 0;
+}
+
+
 
 /* --- Thesis Intro (two-column with image) --- */
 .thesis-intro {
