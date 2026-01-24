@@ -18,19 +18,6 @@
   --color-link: #6b6483;         /* muted purple from AFA9B4 darkened */
   --color-link-hover: #424341;   /* dark on hover */
   --color-accent-dot: var(--color-link);  /* #6b6483 */
-
-  /* Colors - neutral palette 
-  --color-bg: #fafafa;
-  --color-bg-alt: #f0f0f0;
-  --color-surface: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #666666;
-  --color-text-light: #888888;
-  --color-accent: #2a2a2a;
-  --color-border: #e0e0e0;
-  --color-link: #0066cc;
-  --color-link-hover: #0044aa;
- */
   
   /* Typography */
   --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -198,7 +185,7 @@ a:hover {
 
 
 .section + .section {
-  border-top: 1px solid var(--color-border);
+  /* border-top: 1px solid var(--color-border); */
 }
 
 /* --- Link Cards --- */
@@ -365,6 +352,52 @@ hgroup p {
   font-size: 1.1rem;
   color: var(--color-text-muted);
   margin: var(--space-xs) 0 0 0;
+}
+
+
+
+/* --- Showcase Items --- */
+.showcase-item {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+}
+
+.showcase-item + .showcase-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.showcase-image {
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.showcase-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.showcase-content h3 {
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.showcase-content p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 500px) {
+  .showcase-item {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .showcase-image {
+    width: 100%;
+    max-width: 200px;
+  }
 }
 
 
