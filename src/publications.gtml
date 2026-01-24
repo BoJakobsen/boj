@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications – Bo Jakobsen</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Page Header -->
+    <header class="page-header">
+      <a href="index.html" class="back-link">← Back to main page</a>
+      <h1>Publications and Presentations</h1>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- Quick navigation -->
+      <nav class="pub-nav">
+        <a href="#journal">Journal papers</a>
+        <a href="#software">Software</a>
+        <a href="#books">Book chapters</a>
+        <a href="#reports">Reports</a>
+	<a href="#proceedings">Proceedings</a>
+	<a href="#other">Other papers</a>
+        <a href="#int-presentations">International Presentations</a>
+        <a href="#nat-presentations">National Presentations</a>
+        <a href="#other-presentations">Other Presentations</a>
+        
+      </nav>
+
+      <h2 id="journal">Journal papers</h2>
+
+#include "major.html"
+
+      <h2 id="software">Software</h2>
+
+#include "software.html"
+
+      <h2 id="books">Book chapters</h2>
+
+#include "Book.html"
+
+      <h2 id="reports">Reports</h2>
+
+#include "report.html"
+
+      <h2 id="proceedings">Proceedings</h2>
+
+#include "proceedings.html"
+
+      <h2 id="other">Other papers</h2>
+
+#include "minor.html
+
+      <h2 id="int-presentations">International Presentations</h2>
+
+#include "Int-presentation.html"
+
+      <h2 id="nat-presentations">National Presentations</h2>
+
+#include "Nat-presentation.html"
+
+      <h2 id="other-presentations">Other Presentations</h2>
+#include "Other-presentation.html"
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Bo Jakobsen · <a href="https://ruc.dk/forskningsgruppe/matematik-og-fysik-imfufa">IMFUFA</a> · <a href="https://ruc.dk/institut-naturvidenskab-og-miljoe">INM </a> ·
+	<a href="https://ruc.dk">Roskilde University</a></p>
+    </footer>    
+  </div>
+  <script>
+  document.querySelectorAll('.abstract-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.nextElementSibling.classList.toggle('show');
+    btn.textContent = btn.textContent === 'Abstract' ? 'Hide' : 'Abstract';
+    });
+  });
+</script>
+
+
+
+
+</body>
+
+
+
+</html>

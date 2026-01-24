@@ -1,0 +1,11 @@
+// Projekt fil til hjemme side
+// opdateret den 15-07-00
+// tilrette til direkte brug på ruc den 5-9
+
+// kør gtml projekt.gtp for at generer html filer
+
+// katalog der gemmes i
+define OUTPUT_DIR .
+
+
+publications.gtml 2 Publications
