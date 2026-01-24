@@ -16,7 +16,8 @@
   --color-border: #AAAFAF;       /* steel grey */
   --color-link: #6b6483;         /* muted purple from AFA9B4 darkened */
   --color-link-hover: #424341;   /* dark on hover */
-    
+  --color-accent-dot: var(--color-link);  /* #6b6483 */
+
   /* Colors - neutral palette 
   --color-bg: #fafafa;
   --color-bg-alt: #f0f0f0;
@@ -123,7 +124,7 @@ a:hover {
   align-items: flex-start;
   gap: var(--space-lg);
   padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--color-border);
+  /* border-bottom: 1px solid var(--color-border); */
 }
 
 .hero-photo {
@@ -190,6 +191,11 @@ a:hover {
   padding: var(--space-lg) 0;
 }
 
+.section > :first-child {
+  margin-top: 0;
+}
+
+
 .section + .section {
   border-top: 1px solid var(--color-border);
 }
@@ -227,6 +233,28 @@ a:hover {
   font-size: 0.9rem;
   color: var(--color-text-muted);
 }
+
+/* --- Simple links --- */
+
+.link-accent {
+  display: flex;
+  align-items: center;
+  padding: var(--space-xs) 0;
+  color: var(--color-text);
+}
+
+.link-accent::before {
+  content: "●";
+  color: var(--color-accent-dot);
+  margin-right: var(--space-sm);
+  font-size: 0.75em;
+}
+
+.link-accent:hover {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
 
 /* --- Simple List --- */
 .simple-list {
@@ -304,7 +332,7 @@ a:hover {
   padding: var(--space-lg) 0;
 }
 
-.content > :first-child {
+.contents > :first-child {
   margin-top: 0;
 }
 
